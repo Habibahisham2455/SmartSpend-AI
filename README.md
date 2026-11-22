@@ -1,16 +1,49 @@
-# React + Vite
+# SmartSpend AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal finance web app for university students, young professionals, and families.
 
-Currently, two official plugins are available:
+## Features (Phase 1)
+- 📊 **Dashboard** — income/expense/balance summary + spending-by-category chart
+- 💸 **Transactions** — add, list, and delete income/expense entries
+- 🎯 **Budgets** — monthly category limits with 80%/100% alerts
+- 🏦 **Savings Goals** — create goals and track progress
+- 💡 **Insights** — rule-based financial tips (not AI)
+- 📽️ **About** — project presentation slides
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech Stack
+React 19, Vite, React Router, Recharts, Tailwind CSS v4, Vitest
 
-## React Compiler
+## Getting Started
+```bash
+npm install
+npm run dev        # http://localhost:5173
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Scripts
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server |
+| `npm run build` | Production build |
+| `npm run lint` | ESLint check |
+| `npm test` | Run unit tests |
+| `npm run preview` | Preview production build |
 
-## Expanding the ESLint configuration
+## Project Structure
+```
+src/
+├── pages/          # Route-level page components
+├── components/     # Reusable UI components
+├── context/        # Global state (React Context + useReducer)
+├── hooks/          # Custom hooks
+├── utils/          # Pure business logic functions
+└── data/           # Static data and seed data
+tests/              # Vitest unit tests
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Data Persistence
+State is persisted to `localStorage` under the key `smartspend:v1`. On first load, seed data is pre-populated so the demo is never empty.
+
+## GitHub Workflow
+- Branch per feature: `feature/<issue#>-<short-name>`
+- Conventional commits: `feat:`, `fix:`, `test:`, `docs:`
+- CI runs lint + test + build on every push and PR
