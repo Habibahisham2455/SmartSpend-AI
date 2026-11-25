@@ -102,7 +102,7 @@ export default function TransactionForm({ onSubmit }) {
           <option value="">Select category…</option>
           {CATEGORIES.map((c) => (
             <option key={c.id} value={c.label}>
-              {c.icon} {c.label}
+              {c.label}
             </option>
           ))}
         </select>
