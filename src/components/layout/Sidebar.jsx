@@ -28,9 +28,9 @@ export default function Sidebar({ theme, onToggleTheme, onOpenQuickAdd }) {
     >
       {/* Brand Header */}
       <div className="flex items-center gap-3 px-2 py-3 mb-6">
-        <div className="w-10 h-10 rounded-xl bg-brand-gradient flex items-center justify-center text-white shadow-md shadow-[#8C52FF]/30">
-          <Sparkles className="w-5 h-5" aria-hidden="true" />
-        </div>
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-purple-600">
+            <img src="/favicon.svg" alt="SpendSmart logo" className="h-6 w-6 object-contain" />
+          </div>
         <div>
           <span className="text-lg font-black tracking-tight text-[var(--text-main)]">
             SmartSpend <span className="text-brand-gradient">AI</span>
