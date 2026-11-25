@@ -6,7 +6,6 @@ import {
   Target,
   Info,
   Plus,
-  Sparkles,
 } from 'lucide-react';
 import ThemeToggle from '../ui/ThemeToggle';
 import Button from '../ui/Button';
